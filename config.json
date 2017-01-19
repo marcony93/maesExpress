@@ -1,0 +1,10 @@
+{
+    "sql": 
+    {
+        "user": "sa",
+        "password":"sa123",
+        "server": "localhost", 
+        "database": "prueba"
+    },
+    "port":"8555" 
+}
