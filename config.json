@@ -1,10 +1,10 @@
 {
     "sql": 
     {
-        "user": "sa",
-        "password":"sa123",
-        "server": "localhost", 
-        "database": "prueba"
+        "user": "DB_A12F0A_me_admin",
+        "password":"N1ct@3lS",
+        "server": "SQL5034.SmarterASP.NET", 
+        "database": "DB_A12F0A_me"
     },
     "port":"8555" 
 }

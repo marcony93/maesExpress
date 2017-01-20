@@ -6,14 +6,11 @@ const express = require('express'),
       cookieParser = require('cookie-parser'),
       bodyParser = require('body-parser'),
       index = require('./routes/index'),
-      users = require('./routes/users'),
-      productCtr = require('./controllers/product'),
-      productModel = require('./models/product');;
-
+      users = require('./routes/users');
 module.exports = function(connection)
 {
+  var productCtr = require('./controllers/product')(connection);
   var app = express();
-
   // view engine setup
   app.set('views', paths.join(__dirname, 'views'));
   app.set('view engine', 'hbs');
@@ -31,21 +28,21 @@ module.exports = function(connection)
 
   app.get('/api/producto',(req,res) => 
   {
-    productCtr.getproduct(connection,(respuesta) => 
+    productCtr.getproduct((respuesta) => 
     {
       res.status(200).send({products:respuesta});
     });
   });
 
-  app.post('/api/save',(req,res) => 
-  {
-    var respuesta = new productModel(req.body.IdProductor,req.body.Nombreroductor)
-    productCtr.saveProducts(connection,respuesta,(respuesta) => 
-    {
-      res.status(200).send({products:respuesta});
-    });
+  // app.post('/api/save',(req,res) => 
+  // {
+  //   var respuesta = new productModel(req.body.IdProductor,req.body.Nombreroductor)
+  //   productCtr.saveProducts(connection,respuesta,(respuesta) => 
+  //   {
+  //     res.status(200).send({products:respuesta});
+  //   });
     
-  });
+  // });
 
   // catch 404 and forward to error handler
   app.use((req, res, next) => 
