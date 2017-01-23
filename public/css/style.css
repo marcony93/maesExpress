@@ -1,8 +1,180 @@
+html {
+  font-size: 15px; }
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ font-family: 'Open Sans', sans-serif;
+
+  
 }
 
+
 a {
-  color: #00B7FF;
+  color: white;
 }
+
+ .logo img {
+  width: 150px;
+  height: auto; }
+
+.display-4 {
+  font-size: 4rem;
+  font-weight: 300; }
+
+.texto-encabezado .display-4{
+  margin-top: 4rem;
+}
+
+.align{
+  text-align: center;
+}
+.space-col{
+  margin-top: 10rem;
+}
+
+.header label{
+  margin-top: 2rem;
+}
+.welcome{
+  background: url("../img/px.jpg") no-repeat center top !important;
+   color: #fff;
+  background-size: cover;
+  background-attachment: fixed !important;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+      -ms-flex-direction: column ;
+          flex-direction: column ; 
+  
+}
+
+.space{
+  margin-right: 20px;
+}
+.texto-encabezado{
+   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.texto-encabezado .btn-primary{
+  margin-top: 1rem; 
+}
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #F26235 !important;
+  border-color: transparent !important;
+   
+ }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:hover {
+  background-color: #0D6EB7 !important;
+  border-color: transparent !important; }
+.menuicon{
+   color: white;
+  font-size: 2rem;
+  
+}
+.arrow a {
+  display: inline-block;
+  color: white;
+  font-size: 4rem;
+  -webkit-animation: flecha-animada 2s ease-in-out infinite;
+          animation: flecha-animada 2s ease-in-out infinite; }
+
+@-webkit-keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+
+/*-----------------------------
+company
+------------------------------*/
+.company {
+  background: #F26235;
+  color: #fff; }
+
+.company img {
+  width: 80%;
+  margin: 0 auto;
+  display: block; }
+
+.piedepagina {
+  background: #111111;
+  color: #fff;
+  text-align: center;
+  font-size: .9rem; }
+
+.piedepagina .redes-sociales {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.piedepagina .redes-sociales a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 .5rem;
+  opacity: .7;
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease; }
+
+.piedepagina .redes-sociales a:hover {
+  opacity: 1; }
+
+
+  /*-----------------------------
+     Media querys
+------------------------------*/
+
+@media (min-width: 992px) {
+    html {
+      font-size: 16px; }
+
+    .welcome{
+      background: url("../images/fondo-encabezado-grande.jpg") no-repeat center top  ; 
+      background-size: cover; }
+
+    }
