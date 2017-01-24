@@ -6,10 +6,12 @@ const express = require('express'),
       cookieParser = require('cookie-parser'),
       bodyParser = require('body-parser'),
       index = require('./routes/index'),
+      aboutUs = require('./routes/aboutUs'),
       users = require('./routes/users');
 module.exports = function(connection)
 {
   var productCtr = require('./controllers/product')(connection);
+  var client = require('./controllers/client')(connection);
   var app = express();
   // view engine setup
   app.set('views', paths.join(__dirname, 'views'));
@@ -23,15 +25,24 @@ module.exports = function(connection)
   app.use(cookieParser());
   app.use(express.static(paths.join(__dirname, 'public')));
   app.use('/', index);
-  app.use('/users', users);
+  app.use('/login', aboutUs);
+  app.use('/aboutUs', aboutUs);
+  app.use('/services', aboutUs);
+  app.use('/register', aboutUs);
   
 
   app.get('/api/producto',(req,res) => 
   {
-    productCtr.getproduct((respuesta) => 
+    client.get((respuesta) => 
     {
       res.status(200).send({products:respuesta});
     });
+  });
+
+ app.get('/api/pro',(req,res) => 
+  {
+    client.getWhere()
+    res.status(200).send({j:"simon"})
   });
 
   // app.post('/api/save',(req,res) => 
