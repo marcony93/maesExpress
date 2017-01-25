@@ -8,10 +8,11 @@ const express = require('express'),
       index = require('./routes/index'),
       aboutUs = require('./routes/aboutUs'),
       users = require('./routes/users');
+      
 module.exports = function(connection)
 {
   var productCtr = require('./controllers/product')(connection);
-  var client = require('./controllers/client')(connection);
+  var methods = require('./controllers/metodos')(connection);
   var app = express();
   // view engine setup
   app.set('views', paths.join(__dirname, 'views'));
@@ -29,21 +30,23 @@ module.exports = function(connection)
   app.use('/aboutUs', aboutUs);
   app.use('/services', aboutUs);
   app.use('/register', aboutUs);
-  
+  app.use('/api', methods);
 
-  app.get('/api/producto',(req,res) => 
-  {
-    client.get((respuesta) => 
-    {
-      res.status(200).send({products:respuesta});
-    });
-  });
+//   app.get('/api/producto',(req,res) => 
+//   {
+//     client.get((respuesta) => 
+//     {
+//       res.status(200).send({products:respuesta});
+//     });
+//   });
 
- app.get('/api/pro',(req,res) => 
-  {
-    client.getWhere()
-    res.status(200).send({j:"simon"})
-  });
+//  app.get('/api/pro',(req,res) => 
+//   {
+//     client.getWhere((respuesta) =>
+//     {
+//           res.status(200).send({j:respuesta})
+//     })
+//   });
 
   // app.post('/api/save',(req,res) => 
   // {

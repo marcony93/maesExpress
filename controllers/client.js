@@ -2,6 +2,8 @@
 module.exports = function(connection)
 {
     const crud = require("./crud")(connection);
+    const modelClient = require("../models/modelclient");
+    var client = new modelClient();
     var retorno = {
         get: function(callback)
         {
@@ -10,9 +12,12 @@ module.exports = function(connection)
                 return callback(res);
             })
         },
-        getWhere: function()
+        getWhere: function(expresion, callback)
         {
-            crud.getWhere("CLIENT","CLIENT_ID = '1504199300308' ");
+            crud.getWhere("CLIENT", expresion, (res) =>
+            {
+                return callback(res);
+            });
         }
     }
     return retorno;

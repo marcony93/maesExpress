@@ -1,7 +1,7 @@
 'use strict'
 module.exports = function(ClientId,Name,Company,Cell,Phone,Email,Address,Country,State,City,ZipCode,User,Password){
-    this.IdProductor = IdProductor;
-    this.Nombreroductor = Nombreroductor;
+    this.ClientId = ClientId;
+    this.Name = Name;
     this.Company = Company;
     this.Cell = Cell;
     this.Phone = Phone;
