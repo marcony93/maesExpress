@@ -4,31 +4,33 @@
     <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel='stylesheet' href='/css/style.css'/>
+     <link rel='stylesheet' href='/css/font-awesome.min.css' type="text/css"/>
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
     
     <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="lib/bootstrap/dist/js/style.js"></script>
   </head>
   <body>
-   <header>
+   <header class="encabezado">
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
               <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                        <span class="glyphicon glyphicon-menu-hamburger menuicon" aria-hidden="true"></span></a>
                     </button><!-- .navbar-toggle -->
-                    <a class="navbar-brand logo" href="">
+                    <a class="navbar-brand logo" href="/">
                       <img src="../img/maesexpress.png">
                     </a><!-- .navbar-brand -->
               </div><!-- .navbar-header -->
-
-              <div class="collapse navbar-collapse align ">
+                   
+              <div class="collapse navbar-collapse align alignTop ">
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="active"><a href="/index.hbs" >Inicio</a></li>
-                      <li><a href="/aboutUs.hbs" >Nosotros</a></li>
-                      <li><a href="#" >Servicios</a></li>
-                      <li><a href="#" >Iniciar sesión</a></li>
+                      <li><a href="/" >Inicio</a></li>
+                      <li><a href="/aboutUs" >Nosotros</a></li>
+                      <li><a href="/services" >Servicios</a></li>
+                      <li><a href="/login" >Iniciar sesión</a></li>
                     </ul>
               </div><!-- .collapse -->
 
@@ -37,17 +39,15 @@
     </header>
       
     {{{body}}}
-         <footer class="piedepagina py-1" role="contentinfo">
-        <div class="container">
-            <p>2017 © MAESEXPRESS Todos los derechos reservados</p>
-            <ul class="redes-sociales">
-                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"> </i>  </a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
-                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> </a></li>
-            </ul>
-
-        </div>
-
+         <footer class="pagefooter py-1" role="contentinfo">
+            <div class="container">
+                <p>2017 © MAESEXPRESS Todos los derechos reservados</p>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"> </i>  </a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> </a></li>
+                </ul>
+            </div>
     </footer>
   </body>
 </html>

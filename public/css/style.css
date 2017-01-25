@@ -2,15 +2,16 @@ html {
   font-size: 15px; }
 
 body {
- font-family: 'Open Sans', sans-serif;
-
+ font-family: 'Open Sans', sans-serif !important;
+ font-size: 15px !important;
   
 }
-
 
 a {
   color: white;
 }
+
+
 
  .logo img {
   width: 150px;
@@ -27,8 +28,13 @@ a {
 .align{
   text-align: center;
 }
+
+.alignTop{
+margin-top: 5px;
+}
+
 .space-col{
-  margin-top: 10rem;
+  margin-top: 3.5rem;
 }
 
 .header label{
@@ -51,6 +57,46 @@ a {
           flex-direction: column ; 
   
 }
+
+
+
+.welcome2{
+  background: url("../img/px.jpg") no-repeat center top !important;
+   color: #fff;
+  background-size: cover;
+  background-attachment: fixed !important;
+  height: 50vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+      -ms-flex-direction: column ;
+          flex-direction: column ; 
+  
+}
+.font-weight-bold {
+    font-weight: bold;
+}
+.navbar-inverse {
+    background-color: #111111;
+    border-color: transparent;
+}
+
+.navbar-fixed-top {
+    top: 0 !important;
+    border-width: 0 0 0px !important;
+}
+
+.navbar {
+    position: relative;
+    min-height: 60px !important;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+}
+
 
 .space{
   margin-right: 20px;
@@ -134,13 +180,20 @@ company
   margin: 0 auto;
   display: block; }
 
-.piedepagina {
+
+  /*-----------------------------
+ Page Footer
+------------------------------*/
+
+.pagefooter {
+  
   background: #111111;
   color: #fff;
   text-align: center;
-  font-size: .9rem; }
+  font-size: 1.2rem;
+  }
 
-.piedepagina .redes-sociales {
+.pagefooter .social-icons {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,16 +206,21 @@ company
   margin: 0;
   padding: 0; }
 
-.piedepagina .redes-sociales a {
+.pagefooter .social-icons a {
   color: #fff;
-  font-size: 2rem;
+  font-size: 4rem;
   margin: 0 .5rem;
   opacity: .7;
   -webkit-transition: all .5s ease;
           transition: all .5s ease; }
 
-.piedepagina .redes-sociales a:hover {
+.pagefooter .social-icons a:hover {
   opacity: 1; }
+
+  .py-1 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
 
 
   /*-----------------------------
@@ -178,3 +236,305 @@ company
       background-size: cover; }
 
     }
+
+ /*-----------------------------
+     login
+------------------------------*/
+
+
+    .page-lock {
+  margin: 90px auto 30px auto;
+  width: 450px;
+}
+
+.page-lock .page-logo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.page-lock .page-body {
+  width: 100%;
+  margin-top: 50px;
+  background-color: #3a4554;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+}
+
+.lock-head {
+  display: block;
+  background-color: #323d4b;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #4db3a5;
+}
+
+.lock-body {
+  display: block;
+  margin: 35px;
+  overflow: hidden;
+}
+
+.lock-avatar {
+  margin-top: 15px;
+  height: 110px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.lock-form {
+  padding-left: 40px;
+}
+
+.lock-form h4 {
+  margin-top: 0px;
+  color: #dbe2ea;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.lock-form .form-group {
+  margin-top: 20px;
+}
+
+.lock-form .form-group .form-control {
+  background-color: #303a48;
+  border: none;
+  width: 220px;
+  height: 40px;
+  color: #697687;
+  border-radius: 0;
+}
+
+.lock-form .form-group .form-control::-moz-placeholder {
+  color: #556376;
+  opacity: 1;
+}
+
+.lock-form .form-group .form-control:-ms-input-placeholder {
+  color: #556376;
+}
+
+.lock-form .form-group .form-control::-webkit-input-placeholder {
+  color: #556376;
+}
+
+.lock-form .form-group .form-control:focus {
+  background-color: #2b3542;
+}
+
+.lock-form .form-actions {
+  margin-top: 20px;
+}
+
+.lock-form .form-actions .btn-success {
+  background-color: #dbe2ea !important;
+  width: 220px;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+}
+
+.lock-form .form-actions .btn-success:hover {
+  background-color: #556376 !important;
+}
+
+.lock-bottom {
+  display: block;
+  background-color: #323d4b;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.lock-bottom a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #638cac;
+}
+
+.lock-bottom a:hover {
+  color: #7ba2c0;
+}
+
+@media (max-width: 768px) {
+  .page-lock {
+    margin: 100px auto;
+  }
+}
+@media (max-width: 560px) {
+  .page-lock {
+    margin: 50px auto;
+    width: 400px;
+  }
+
+  .lock-body {
+    margin: 30px;
+  }
+
+  .lock-avatar {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .lock-form h4 {
+    font-size: 1rem;
+  }
+
+  .lock-form .form-group .form-control {
+    padding: 20px 20px;
+    width: 170px;
+  }
+
+  .lock-form .form-actions .btn-success {
+    width: 170px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 420px) {
+  .page-lock {
+    margin: 30px auto;
+    width: 280px;
+  }
+
+  .lock-body {
+    margin: 0px;
+  }
+
+  .page-lock .page-body {
+    margin-top: 30px;
+  }
+
+  .lock-avatar {
+    margin-top: 20px;
+  }
+
+  .lock-avatar-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .lock-form {
+    padding-left: 20px;
+  }
+
+  .lock-form h4 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .lock-form .form-group .form-control {
+    padding: 20px 20px;
+    width: 240px;
+  }
+
+  .lock-form .form-actions .btn-success {
+    width: 240px;
+    margin-bottom: 20px;
+  }
+}
+
+@CHARSET "UTF-8";
+
+
+.progress-bar {
+    color: #333;
+} 
+
+* {
+    -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+
+    .form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+	
+	}
+
+.login-form {
+	margin-top: 65px;
+}
+
+form[role=login] {
+	color: #5d5d5d;
+	background: #f2f2f2;
+	padding: 26px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+	form[role=login] img {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 35px;
+	}
+	form[role=login] input,
+	form[role=login] button {
+		font-size: 18px;
+		margin: 16px 0;
+	}
+	form[role=login] > div {
+		text-align: center;
+	}
+	
+.form-links {
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 20px;
+}
+	.form-links a {
+		color: #fff;
+	}
+
+  /*-----------------------------
+     About Us
+------------------------------*/
+
+.paginas-internas .bienvenidos {
+  height: 50vh; }
+
+.paginas-internas .route {
+  background: #F26235;
+  color: #fff; }
+
+.paginas-internas .route a {
+  color: #fff;
+  text-decoration: underline; }
+
+.paginas-internas .route a:hover {
+  text-decoration: none; }
+
+.paginas-internas .panel .panel-heading {
+  font-size: 20px; }
+
+.paginas-internas .panel .panel-heading a {
+  background: #F26235;
+  color: #fff;
+  display: block !important;
+  padding: 16px  !important;
+  border-radius: 5px  !important;
+  text-decoration: none;
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease; }
+
+.paginas-internas .panel .panel-heading a:hover {
+  background: #0D6EB7;
+  color: #fff; }
+
+
+

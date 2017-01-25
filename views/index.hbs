@@ -8,7 +8,7 @@
              <a href="#" class="btn btn-primary btn-lg">Inicia Sesión</a>
              <br><br><br>
              <label class="space">Eres un cliente nuevo?</label>
-             <label><a href="#" class="">Registrate Ahora</a></label>
+             <label><a href="/register" class="">Registrate Ahora</a></label>
      </div>
     
    
@@ -23,7 +23,7 @@
        <div class="container">
             <div class="row">
                 <div class="col-md-8 col-xl-9 wow bounceIn" data-wow-delay=".3s">
-                    <h2 class="h3 text-xs-center text-md-left font-weight-bold align ">Agencia de Envios</h2>
+                    <h2 class=" text-xs-center text-md-left font-weight-bold align ">Agencia de Envios</h2>
                     <p class=" text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ipsa, similique maiores provident numquam non sequi est animi, id soluta, neque autem recusandae pariatur quasi cupiditate velit. Quis, delectus.</p>
                     <p class=" text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quia natus voluptates nobis, cumque distinctio, laboriosam nisi reprehenderit dolor quibusdam quasi? Magni repellendus ullam sunt amet sint officia similique distinctio..</p>
                 </div>
@@ -38,8 +38,9 @@
 <section class="rates" id="rates">
 <div class="container">
             <div class="row">
-                 <div class="col-md-6 space-col">
-                    <h2 class="h3 text-xs-center font-weight-bold align">Cotizaciones</h2>
+                 <div class="col-md-4 space-col">
+                    <h2 class="text-xs-center font-weight-bold align">Cotizaciones</h2>
+                    <hr>
                         <p class="text-xs-center text-justify align ">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident et, temporibus, inventore, repellat, molestiae facilis labore explicabo sit tempore voluptas animi. Labore culpa animi unde natus, veritatis sunt omnis praesentium.
                         </p>
@@ -48,7 +49,7 @@
                         </center>
                 </div>
                 <br><br>
-                <div class="col-md-6">
+                <div class="col-md-4">
                       <form name="rates" class="form-signin">
                         <h3>Origen</h3>
                         <hr>
@@ -66,42 +67,48 @@
                         
                                     <label for="zipCode" >Codigo postal</label>
                                 <input type="number" id="zipCode" class="form-control">
-                                
-                                    <h3>Destino</h3><hr>
+                      </form>
+                                </div>
+                                   <div class="col-md-4">
+                                    <form name="rates" class="form-signin">
+                                                <h3>Destino</h3><hr>
 
-                                    <label for="country">Pais</label>
-                                    <select class="selectpicker form-control " id="country" data-style="btn-default" >
-                                    <option value="1">Honduras</option>
-                                    <option value="2">Guatemala</option>
-                                    <option value="3">El Salvador</option>
-                                    <option value="4">Nicaragua</option>
-                                    </select>
-                                    
-                                    <label for="depto">Deparatamento o Provincia</label>
-                                    <select class="selectpicker form-control " id="country" data-style="btn-default" >
-                                    <option value="1">Francisco Morazan</option>
-                                    <option value="2">La Esperanza</option>
-                                    <option value="3">Cortes</option>
-                                    </select>
+                                                <label for="country">Pais</label>
+                                                <select class="selectpicker form-control " id="country" data-style="btn-default" >
+                                                <option value="1">Honduras</option>
+                                                <option value="2">Guatemala</option>
+                                                <option value="3">El Salvador</option>
+                                                <option value="4">Nicaragua</option>
+                                                </select>
+                                                
+                                                <label for="depto">Deparatamento o Provincia</label>
+                                                <select class="selectpicker form-control " id="country" data-style="btn-default" >
+                                                <option value="1">Francisco Morazan</option>
+                                                <option value="2">La Esperanza</option>
+                                                <option value="3">Cortes</option>
+                                                </select>
+                                            
+                                                <h3>Info. Paquete</h3><hr>
 
+                                            <label for="ctp">Cantidad de paquetes</label>
+                                            <input type="number" id="cant" class="form-control ">
 
-                                <label for="ctp">Cantidad de paquetes</label>
-                                <input type="number" id="cant" class="form-control ">
-
-                                <label for="weigth">Peso en Kg</label>
-                                <input type="number" id="weigth" class="form-control ">
-                            
-                                    <label for="dimensions">Dimensiones</label>
-                                    <select class="selectpicker form-control " id="country" data-style="btn-default" >
-                                    <option value="1">22x22</option>
-                                    <option value="2">22x30</option>
-                                    <option value="3">30x30</option>
-                                    </select>
-                                    <br>
-                                    <button type="button"  class="btn btn-primary btn-lg">Generar</button>
-                                    <button type="button"  class="btn btn-danger btn-lg">Limpiar</button>
-                                    
-                        </form>
+                                            <label for="weigth">Peso en Kg</label>
+                                            <input type="number" id="weigth" class="form-control ">
+                                        
+                                                <label for="dimensions">Dimensiones</label>
+                                                <select class="selectpicker form-control " id="country" data-style="btn-default" >
+                                                <option value="1">22x22</option>
+                                                <option value="2">22x30</option>
+                                                <option value="3">30x30</option>
+                                                </select>
+                                                <br>
+                                                   
+                                      </form>
+                                      <button type="button"  class="btn btn-danger btn-lg">Limpiar</button>
+                                      <button type="button"  class="btn btn-primary btn-lg">Generar</button> 
+                                   </div>
+                                   
                 </div> 
         </div>
 </section><br><br>
