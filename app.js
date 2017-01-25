@@ -7,6 +7,9 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       index = require('./routes/index'),
       aboutUs = require('./routes/aboutUs'),
+      login = require('./routes/login'),
+      register = require('./routes/register'),
+      services = require('./routes/services'),
       users = require('./routes/users');
       
 module.exports = function(connection)
@@ -26,10 +29,10 @@ module.exports = function(connection)
   app.use(cookieParser());
   app.use(express.static(paths.join(__dirname, 'public')));
   app.use('/', index);
-  app.use('/login', aboutUs);
+  app.use('/login', login);
   app.use('/aboutUs', aboutUs);
-  app.use('/services', aboutUs);
-  app.use('/register', aboutUs);
+  app.use('/services', services);
+  app.use('/register', register);
   app.use('/api', methods);
 
 //   app.get('/api/producto',(req,res) => 
