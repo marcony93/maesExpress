@@ -186,7 +186,7 @@ company
 ------------------------------*/
 
 .pagefooter {
-  
+  height: 20vh;
   background: #111111;
   color: #fff;
   text-align: center;
@@ -218,8 +218,8 @@ company
   opacity: 1; }
 
   .py-1 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
 }
 
 
