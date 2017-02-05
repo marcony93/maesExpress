@@ -4,23 +4,31 @@ module.exports = function(connection)
 {
 
     var crud = {
-    get:function(table,callback)
-    {
-        var request = new sql.Request(connection); 
-        request.query(String("select * from " + table), (err, recordset) => 
+        select:function(table,callback)
         {
-            return callback(recordset);
-        });
-    },
-    getWhere:function(table, where, callback)
-    {
-        var request = new sql.Request(connection);
-        console.log(String("select * from " + table +" where "+ where))
-        request.query(String("select * from " + table +" where "+ where), (err,recordset) =>
+            var request = new sql.Request(connection); 
+            request.query(String("select * from " + table), (err, recordset) => 
+            {
+                return callback(recordset);
+            });
+        },
+        selectWhere:function(table, where, callback)
         {
-            return callback(recordset);
-        });
-    }
+            var request = new sql.Request(connection);
+            request.query(String("select * from " + table +" where "+ where), (err,recordset) =>
+            {
+                return callback(recordset);
+            });
+        },
+        insert:function(table,values,callback)
+        {
+            var request = new sql.Request(connection);
+            request.query(String("INSERT INTO "+ table +" VALUES ("+values+")"),(err,recordset) =>
+            {
+                if(err) return callback(false);
+                else return callback(true);
+            });
+        }
     };
     return crud;
 };

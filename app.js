@@ -14,7 +14,6 @@ const express = require('express'),
       
 module.exports = function(connection)
 {
-  var productCtr = require('./controllers/product')(connection);
   var methods = require('./controllers/metodos')(connection);
   var app = express();
   // view engine setup
