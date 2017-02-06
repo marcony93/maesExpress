@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.0",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
@@ -13,6 +14,7 @@
     "hbs": "~4.0.1",
     "morgan": "~1.7.0",
     "mssql": "^3.3.0",
+    "password-hash-and-salt": "^0.1.4",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
