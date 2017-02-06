@@ -1,9 +1,9 @@
 html {
-  font-size: 15px; }
+  font-size: 16px; }
 
 body {
  font-family: 'Open Sans', sans-serif !important;
- font-size: 15px !important;
+ font-size: 1.4em !important;
   
 }
 
@@ -11,18 +11,21 @@ a {
   color: white;
 }
 
-
+.spaceRegister{
+  margin-top: -7px;
+  margin-bottom: 30px;
+}
 
  .logo img {
   width: 150px;
   height: auto; }
 
 .display-4 {
-  font-size: 4rem;
+  font-size: 55px;
   font-weight: 300; }
 
 .texto-encabezado .display-4{
-  margin-top: 4rem;
+  margin-top: 64px;
 }
 
 .align{
@@ -38,7 +41,7 @@ margin-top: 5px;
 }
 
 .header label{
-  margin-top: 2rem;
+  margin-top: 32px;
 }
 .welcome{
   background: url("../img/px.jpg") no-repeat center top !important;
@@ -117,7 +120,7 @@ margin-top: 5px;
 }
 
 .texto-encabezado .btn-primary{
-  margin-top: 1rem; 
+  margin-top: 16px; 
 }
 
 
@@ -135,13 +138,13 @@ margin-top: 5px;
   border-color: transparent !important; }
 .menuicon{
    color: white;
-  font-size: 2rem;
+  font-size: 28px;
   
 }
 .arrow a {
   display: inline-block;
   color: white;
-  font-size: 4rem;
+  font-size: 64px;
   -webkit-animation: flecha-animada 2s ease-in-out infinite;
           animation: flecha-animada 2s ease-in-out infinite; }
 
@@ -173,9 +176,16 @@ company
 ------------------------------*/
 .company {
   background: #F26235;
-  color: #fff; }
+  color: #fff;
+  
+   }
+   .comp{
+     padding-top: 5em;
+     padding-bottom: 5em;
+   }
 
 .company img {
+  margin-top: 20px;
   width: 80%;
   margin: 0 auto;
   display: block; }
@@ -186,11 +196,11 @@ company
 ------------------------------*/
 
 .pagefooter {
-  height: 20vh;
+  height: 25vh;
   background: #111111;
   color: #fff;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 16px;
   }
 
 .pagefooter .social-icons {
@@ -208,8 +218,8 @@ company
 
 .pagefooter .social-icons a {
   color: #fff;
-  font-size: 4rem;
-  margin: 0 .5rem;
+  font-size: 45px;
+  margin: 0 8px;
   opacity: .7;
   -webkit-transition: all .5s ease;
           transition: all .5s ease; }
@@ -218,9 +228,10 @@ company
   opacity: 1; }
 
   .py-1 {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
 }
+
 
 
   /*-----------------------------
@@ -230,12 +241,44 @@ company
 @media (min-width: 992px) {
     html {
       font-size: 16px; }
+      
 
     .welcome{
       background: url("../images/fondo-encabezado-grande.jpg") no-repeat center top  ; 
       background-size: cover; }
 
+      
+
     }
+
+
+
+/*-------------------------------------------
+Services
+--------------------------------------------*/
+.paginas-internas .servicesList {
+  background: #0D6EB7; }
+
+.paginas-internas .servicesList .services-item {
+  background: #ffffff;
+  text-align: center;
+  border: 5px solid #0D6EB7;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  padding: 16px; }
+
+.paginas-internas .servicesList .services-item .fa {
+  font-size: 96px;
+  color: #F26235;
+  margin-bottom: 16px;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease; }
+
+.paginas-internas .servicesList .services-item:hover .fa {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
 
  /*-----------------------------
      login
@@ -467,7 +510,7 @@ company
 	}
 
 .login-form {
-	margin-top: 65px;
+	margin-top: 75px;
 }
 
 form[role=login] {
