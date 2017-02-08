@@ -9,21 +9,21 @@ module.exports = function(connection)
 
     apirouter.post("/iniciarSesion", (req,res) => 
     {
-        
         var query = " USER_C = " + req.body.User;
         client.getWhere(String(query),(respuesta) =>
         {
             if(respuesta.length>0)
             {
-                console.log(req.body.password,respuesta[0].PASSWORD_C)
                 password(req.body.password).verifyAgainst(respuesta[0].PASSWORD_C, function(error, verified) {
-                    console.log(verified)
                     if(error)
                         res.status(200).send({confirmacion:false});
                     if(!verified) {
                         res.status(200).send(false);
                     } else {
+                        res.cookie("estaConectado" , true)
+                        res.cookie("userCookie",respuesta)
                         res.status(200).send({j:respuesta,confirmacion:true});
+                        
                     }
                 });
             }

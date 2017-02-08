@@ -10,7 +10,7 @@ const express = require('express'),
       login = require('./routes/login'),
       register = require('./routes/register'),
       services = require('./routes/services'),
-      users = require('./routes/users');
+      user = require('./routes/user');
       
 module.exports = function(connection)
 {
@@ -32,35 +32,10 @@ module.exports = function(connection)
   app.use('/aboutUs', aboutUs);
   app.use('/services', services);
   app.use('/register', register);
+  app.use('/user', user);
   app.use('/api', methods);
 
-//   app.get('/api/producto',(req,res) => 
-//   {
-//     client.get((respuesta) => 
-//     {
-//       res.status(200).send({products:respuesta});
-//     });
-//   });
 
-//  app.get('/api/pro',(req,res) => 
-//   {
-//     client.getWhere((respuesta) =>
-//     {
-//           res.status(200).send({j:respuesta})
-//     })
-//   });
-
-  // app.post('/api/save',(req,res) => 
-  // {
-  //   var respuesta = new productModel(req.body.IdProductor,req.body.Nombreroductor)
-  //   productCtr.saveProducts(connection,respuesta,(respuesta) => 
-  //   {
-  //     res.status(200).send({products:respuesta});
-  //   });
-    
-  // });
-
-  // catch 404 and forward to error handler
   app.use((req, res, next) => 
   {
     var err = new Error('Not Found');
