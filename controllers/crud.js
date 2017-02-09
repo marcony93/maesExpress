@@ -20,6 +20,14 @@ module.exports = function(connection)
                 return callback(recordset);
             });
         },
+        selectFieldsWhere:function(table, fields, where, callback)
+        {
+            var request = new sql.Request(connection);
+            request.query(String("select " + fields + " from " + table +" where "+ where), (err,recordset) =>
+            {
+                return callback(recordset);
+            });
+        },
         insert:function(table,values,callback)
         {
             console.log(String("INSERT INTO "+ table +" VALUES ("+values+")"))

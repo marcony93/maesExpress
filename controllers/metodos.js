@@ -58,6 +58,15 @@ module.exports = function(connection)
         });
     });
 
+    apirouter.post("/getUsersName", (req,res) =>
+    {
+        var userName = req.body.userName;
+        client.getUsers(" USER_C ", "'"+userName+"'"+ " =  USER_C",(response) =>
+        {
+            res.status(200).send({data:response});
+        });
+    });
+
     return apirouter;
 };
 
