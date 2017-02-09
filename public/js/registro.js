@@ -2,11 +2,13 @@
 
 function enviarRegistro()
 {
-    window.camposVacios("de");
-
     if(document.getElementById("password").value != document.getElementById("passwordConf").value)
     {
         document.getElementById("mensajeContrasenia").innerHTML = "Las contraseñas no coinciden";
+    }
+    else if(window.camposVacios("de"))
+    {
+        document.getElementById("mensajeContrasenia").innerHTML = "Algunos campos estan vacíos";
     }
     else
     {
@@ -26,12 +28,22 @@ function enviarRegistro()
             userId:document.getElementById("userId").value,
             pass: document.getElementById("password").value
         };
-        console.log(user)
         window.http('http://localhost:8555/api/registrarCliente',{client:user},function(res)
         {   
             var respuesta = JSON.parse(res);
-            if(respuesta.confirmacion)  $('#registerConfirmationMessage').modal('show');
+            if(respuesta.confirmacion)
+            {
+                document.cookie = "userCookie="+user;
+                document.cookie = "estaConectado=true";
+                $('#registerConfirmationMessage').modal('show');
+            }
             else $('#registerErrorMessage').modal('show');
         });
     }
+}
+
+function abrirSesion()
+{
+    console.log("entra y no da")
+    window.location.replace('http://localhost:8555/user');
 }
