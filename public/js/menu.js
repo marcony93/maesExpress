@@ -13,10 +13,16 @@ $( document ).ready(function() {
     }
     else
     {
-    document.getElementById('navegacion').innerHTML = '<li><a href="/user" >Incio</a></li>\
-                <li><a href="/" >Crear Envio</a></li>\
-                <li><a href="/" >Rastreo</a></li>\
-                <li><a href="/" >Administrar Cuenta</a></li>';
+    document.getElementById('navegacion').innerHTML = '<li><a href="/user" >Crear Envio</a></li>\
+                <li><a href="/" >Historial de Envios</a></li>\
+                <li><a href="/" >Administrar Cuenta</a></li>\
+                <li class="dropdown">\
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hola : UserName <span class="caret"></span></a>\
+                <ul class="dropdown-menu">\
+                    <li onclick="exitSession()"><a href="#">Cerrar sesión</a></li>\
+                </ul>\
+                </li>';
+            
     }
 });
 
