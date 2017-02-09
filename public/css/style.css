@@ -72,7 +72,7 @@ margin-top: 5px;
 
 
 .welcome2{
-  background: url("../img/px.jpg") no-repeat center top !important;
+  background: url("../img/s.jpg") no-repeat center top !important;
    color: #fff;
   background-size: cover;
   background-attachment: fixed !important;
@@ -88,6 +88,26 @@ margin-top: 5px;
           flex-direction: column ; 
   
 }
+
+.welcome3{
+  background: url("../img/services.jpg") no-repeat center top !important;
+   color: #fff;
+  background-size: cover;
+  background-attachment: fixed !important;
+  height: 50vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+      -ms-flex-direction: column ;
+          flex-direction: column ; 
+  
+}
+
+
 .font-weight-bold {
     font-weight: bold;
 }

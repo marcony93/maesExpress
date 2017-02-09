@@ -10,7 +10,8 @@
             <div class="pwstrength_viewport_progress"></div>      
             <button type="button" name="go" class="btn btn-lg btn-primary btn-block" onclick="iniciarSesion()">Iniciar sesión</button>
             <div>
-                <a href="/register">Crear cuenta</a> or <a href="#">recuperar contraseña</a>
+                <a href="/register">Crear cuenta</a> 
+                {{!--<a href="#">recuperar contraseña</a>--}}
             </div>
             
             </form>
@@ -31,17 +32,10 @@
     <div class="modal fade" id="errorMessage" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <center>
-                    <h2 class="modal-title">Algo salio mal</h2>
-                    </center>
-                </div>
-                <div class="modal-body"  id="align"><!-- div body -->
-        <p class="lead align">su nombre de usuario o contraseña esta incorrecto
-          Intentelo otra vez
+                <div class="modal-body fondo"  id="align"><!-- div body -->
+        <p class="lead align">Su nombre de usuario o contraseña estan incorrectos
+          Inténtelo otra vez
+
         </p>
         <center>
         <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal">Aceptar <br/>   <span class="glyphicon glyphicon-remove" id="erroricon" ></span></button>
