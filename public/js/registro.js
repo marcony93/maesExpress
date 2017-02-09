@@ -33,8 +33,6 @@ function enviarRegistro()
             var respuesta = JSON.parse(res);
             if(respuesta.confirmacion)
             {
-                document.cookie = "userCookie="+user;
-                document.cookie = "estaConectado=true";
                 $('#registerConfirmationMessage').modal('show');
             }
             else $('#registerErrorMessage').modal('show');
@@ -44,6 +42,7 @@ function enviarRegistro()
 
 function abrirSesion()
 {
-    console.log("entra y no da")
-    window.location.replace('http://localhost:8555/user');
+    document.getElementById('email').value = document.getElementById("userId").value;
+    document.getElementById('password').value = document.getElementById("password").value;
+    window.iniciarSesion();
 }
