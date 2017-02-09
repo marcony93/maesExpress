@@ -2,7 +2,8 @@
 <div class="container">
             <div class="row spaceRegister">
                  <div class="col-md-4 ">
-                 <h1 class="display-4 align">Crea tu cuenta y registrate en nuestra lista de clientes</h1>
+                 <h1 class="display-4 align justify-text">Crea tu cuenta y registrate en nuestra lista de clientes</h1>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aliquam minima, accusamus porro exercitationem, nihil odio reiciendis autem, quisquam magni odit? Provident optio fugit omnis voluptate cupiditate, dolores deserunt corporis?</p>
                  </div>
                  <div class="col-md-4 ">
                      <form name="rates" class="form-signin">
@@ -77,8 +78,52 @@
                                     <br><br>      
                         </form>
                                     <button type="button"  class="btn btn-danger btn-lg">Cancelar</button>
-                                    <button type="button"  class="btn btn-primary btn-lg">Continuar</button>
+                                    <button type="button"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerConfirmationMessage">Continuar</button>
                 </div> 
                 
         </div>
 </section><br>
+
+
+
+  <!-- Modal 1  -->
+    <div class="modal fade" id="registerErrorMessage" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                {{!--<div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <center>
+                    <h2 class="modal-title">Algo salio mal</h2>
+                    </center>
+                </div>--}}
+                <div class="modal-body fondo"  id="align"><!-- div body -->
+        <p class="lead align"> No se pudo registrar el usuario algunos campos 
+          necesitan ser llenados 
+        </p>
+        <center>
+        <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal">Aceptar <br/>   <span class="glyphicon glyphicon-remove" id="erroricon" ></span></button>
+        </center>
+      </div><!-- div body -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2  -->
+    <div class="modal fade" id="registerConfirmationMessage" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body fondo"  id="align"><!-- div body -->
+                 <center>
+                    <h4 class="modal-title">Usuario registrado con exito</h4>
+                    </center>
+                    <br>
+        <center>
+        <button type="button" class="btn btn-lg btn-primary" data-dismiss="modal">Continuar<br/>  <i class="fa fa-refresh fa-spin" aria-hidden="true"></i> </button>
+        </center>
+      </div><!-- div body -->
+            </div>
+        </div>
+    </div>

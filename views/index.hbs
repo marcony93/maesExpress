@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="display-4 wow fadeIn ">Envio de encomiendas y transporte de carga</h1>
          <p class="lead wow bounceIn"  data-wow-delay=".3s">Llevamos su carga a cualquier parte de  Honduras y Centroamerica</p>
-             <a href="#" class="btn btn-primary btn-lg">Inicia Sesión </a>
+             <a href="/login" class="btn btn-primary btn-lg">Inicia Sesión </a>
              <br><br><br>
              <label class="space">Eres un cliente nuevo?</label>
              <label><a href="/register" class="">Registrate Ahora</a></label>
@@ -68,14 +68,10 @@
                         
                                     <label for="zipCode" >Codigo postal</label>
                                 <input type="number" id="zipCode" class="form-control">
-                      </form>
-                                </div>
-                                   <div class="col-md-4">
-                                          <h3 class=" wow bounceIn">Destino</h3><hr>
-                                    <form name="rates" class="form-signin wow bounceIn" data-wow-delay=".8s">
-                                             
 
-                                                <label for="country">Pais</label>
+                                <h3 class=" wow bounceIn">Destino</h3><hr>
+
+                                  <label for="country">Pais</label>
                                                 <select class="selectpicker form-control " id="country" data-style="btn-default" >
                                                 <option value="1">Honduras</option>
                                                 <option value="2">Guatemala</option>
@@ -89,6 +85,14 @@
                                                 <option value="2">La Esperanza</option>
                                                 <option value="3">Cortes</option>
                                                 </select>
+                      </form>
+                                </div>
+                                   <div class="col-md-4">
+                                          
+                                    <form name="rates" class="form-signin wow bounceIn" data-wow-delay=".8s">
+                                             
+
+                                              
                                             
                                                 <h3>Info. Paquete</h3><hr>
 
