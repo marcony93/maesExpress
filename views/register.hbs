@@ -10,27 +10,36 @@
                         <h3>Información de contacto</h3>
                         <hr>
                                 <label for="name" >Nombre</label>
-                                <input type="text" id="name" class="form-control obligatorio noVacio">
+                                <input type="text" id="name" class="form-control  noVacio">
 
                                  <label for="idNumber" >Numero de identidad</label>
-                                <input type="text" id="idNumber" class="form-control obligatorio noVacio">
+                                <input type="number" id="idNumber" class="form-control  noVacio">
                         
                                 <label for="email" >Email</label>
-                                <input type="text" id="email" class="form-control noVacio">
+                                <input type="email" id="email" class="form-control ">
 
                                       <label for="comp" >Compania</label>
-                                <input type="text" id="comp" class="form-control obligatorio">
+                                <input type="text" id="comp" class="form-control ">
 
                                   <label for="dir" >Dirección</label>
-                                <input type="text" id="dir" class="form-control obligatorio">
+                                <input type="text" id="dir" class="form-control">
                                 
                             
                          
                                  <label for="city" >Ciudad</label>
-                                <input type="text" id="city" class="form-control obligatorio">
+                                <input type="text" id="city" class="form-control">
 
                                 <label for="zipCode" >Codigo postal</label>
-                                <input type="text" id="zipCode" class="form-control obligatorio">
+                                <input type="number" id="zipCode" class="form-control">
+
+                                   
+                                <label for="country">Pais</label>
+                                <select class="selectpicker form-control " id="country" data-style="btn-default" >
+                                <option value="1">Honduras</option>
+                                <option value="2">Guatemala</option>
+                                <option value="3">El Salvador</option>
+                                <option value="4">Nicaragua</option>
+                                </select>
                         
                              <label for="Id">Estado</label>
                                 <select class="selectpicker form-control " id="state" data-style="btn-default" >
@@ -41,46 +50,38 @@
                                 <option value="5">Dealaware</option>
                                 </select>
                                     
-                               
-                                <label for="country">Pais</label>
-                                <select class="selectpicker form-control " id="country" data-style="btn-default" >
-                                <option value="1">Honduras</option>
-                                <option value="2">Guatemala</option>
-                                <option value="3">El Salvador</option>
-                                <option value="4">Nicaragua</option>
-                                </select>
+                            
                                 
                                  <label for="tel" >Telefono</label>
-                                <input type="number" id="tel" class="form-control obligatorio">
+                                <input type="number" id="tel" class="form-control noVacio">
                          
                                  <label for="cell" >Movil</label>
-                                <input type="number" id="cell" class="form-control obligatorio">
-                        </form>
+                                <input type="number" id="cell" class="form-control">
+                     </form>
+                        
                 </div>
                 <div class="col-md-4">
-                      <form name="rates" class="form-signin">
                         <h3>Inicio de sesión</h3>
+                          <form name="register" id="de" class="form-signin">
                         <hr>
-                             
-                            
                                 <label for="userId" >Nombre de usuario</label>
-                                <input type="text" id="userId" class="form-control obligatorio">
+                                <input type="text" id="userId" class="form-control noVacio">
 
                                   <label for="password" >Contraseña</label>
-                                <input type="text" id="password" class="form-control obligatorio">
+                                <input type="password" id="password" class="form-control noVacio">
                                 
                                 <label for="passwordConf" >Verificar contraseña</label>
-                                <input type="text" id="passwordConf" class="form-control obligatorio">
-                                <h4 id="mensajeContrasenia"></h4>
+                                <input type="password" id="passwordConf" class="form-control noVacio">
+                                <h4 class="error" id="mensajeContrasenia" data-wow-delay=".3s"></h4>
                        
                                  <br>
                                 <label for="answer">Terminos y condiciones</label>
                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis alias saepe dolore consequuntur, non eaque enim itaque dolorum cupiditate quas, in inventore dolores vel. Illum repellendus eligendi eius pariatur magnam!
-                                  <input type="radio">
+                                  <input type="radio" name="Terms" value="false">
 
                                     <br><br>      
                         </form>
-                                    <button type="button"  class="btn btn-danger btn-lg">Cancelar</button>
+                                    <button type="button"  class="btn btn-danger btn-lg">Validar campos</button>
                                     <button type="button" onclick="enviarRegistro()" class="btn btn-primary btn-lg">Continuar</button>
                 </div> 
                 
@@ -124,7 +125,7 @@
                     </center>
                     <br>
         <center>
-        <button type="button" class="btn btn-lg btn-primary" data-dismiss="modal">Continuar<br/>  <i class="fa fa-refresh fa-spin" aria-hidden="true"></i> </button>
+        <button type="button" class="btn btn-lg btn-primary" onclick="abrirSesion()" data-dismiss="modal">Continuar<br/>  <i class="fa fa-refresh fa-spin" aria-hidden="true"></i> </button>
         </center>
       </div><!-- div body -->
             </div>

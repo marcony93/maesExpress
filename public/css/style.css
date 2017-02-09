@@ -11,8 +11,14 @@ a {
   color: white;
 }
 .emptyAlert{
-  background-color: indianred !important;
+  border-color:red !important;
+   
 }
+
+.error{
+  color: red;
+}
+
 .spaceRegister{
   margin-top: -7px;
   margin-bottom: 30px;
