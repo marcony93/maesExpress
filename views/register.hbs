@@ -6,17 +6,17 @@
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aliquam minima, accusamus porro exercitationem, nihil odio reiciendis autem, quisquam magni odit? Provident optio fugit omnis voluptate cupiditate, dolores deserunt corporis?</p>
                  </div>
                  <div class="col-md-4 ">
-                     <form name="rates" class="form-signin">
+                     <form name="rates" id="de" class="form-signin">
                         <h3>Información de contacto</h3>
                         <hr>
                                 <label for="name" >Nombre</label>
-                                <input type="text" id="name" class="form-control obligatorio">
+                                <input type="text" id="name" class="form-control obligatorio noVacio">
 
                                  <label for="idNumber" >Numero de identidad</label>
-                                <input type="text" id="idNumber" class="form-control obligatorio">
+                                <input type="text" id="idNumber" class="form-control obligatorio noVacio">
                         
                                 <label for="email" >Email</label>
-                                <input type="text" id="email" class="form-control">
+                                <input type="text" id="email" class="form-control noVacio">
 
                                       <label for="comp" >Compania</label>
                                 <input type="text" id="comp" class="form-control obligatorio">
@@ -71,7 +71,7 @@
                                 
                                 <label for="passwordConf" >Verificar contraseña</label>
                                 <input type="text" id="passwordConf" class="form-control obligatorio">
-                                
+                                <h4 id="mensajeContrasenia"></h4>
                        
                                  <br>
                                 <label for="answer">Terminos y condiciones</label>
@@ -81,7 +81,7 @@
                                     <br><br>      
                         </form>
                                     <button type="button"  class="btn btn-danger btn-lg">Cancelar</button>
-                                    <button type="button"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerConfirmationMessage">Continuar</button>
+                                    <button type="button" onclick="enviarRegistro()" class="btn btn-primary btn-lg">Continuar</button>
                 </div> 
                 
         </div>

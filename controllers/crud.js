@@ -22,6 +22,7 @@ module.exports = function(connection)
         },
         insert:function(table,values,callback)
         {
+            console.log(String("INSERT INTO "+ table +" VALUES ("+values+")"))
             var request = new sql.Request(connection);
             request.query(String("INSERT INTO "+ table +" VALUES ("+values+")"),(err,recordset) =>
             {

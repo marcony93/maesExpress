@@ -53,7 +53,7 @@ module.exports = function(connection)
             }
             client.saveClient(dataString.substring(1),(respuesta) =>
             {
-                res.status(200).send({mensaje:respuesta});
+                res.status(200).send({confirmacion:respuesta});
             });
         });
     });

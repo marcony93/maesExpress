@@ -10,7 +10,9 @@ body {
 a {
   color: white;
 }
-
+.hs{
+  background-color: indianred !important;
+}
 .spaceRegister{
   margin-top: -7px;
   margin-bottom: 30px;
