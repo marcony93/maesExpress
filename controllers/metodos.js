@@ -15,22 +15,17 @@ module.exports = function(connection)
             if(respuesta.length>0)
             {
                 password(req.body.password).verifyAgainst(respuesta[0].PASSWORD_C, function(error, verified) {
-                    if(error)
-                        res.status(200).send({confirmacion:false});
-                    if(!verified) {
-                        res.status(200).send(false);
-                    } else {
+                    if(error) res.status(200).send({confirmacion:false});
+                    if(!verified) res.status(200).send(false);
+                    else {
+                        respuesta[0].PASSWORD_C = null;
                         res.cookie("estaConectado" , true)
                         res.cookie("userCookie",respuesta)
-                        res.status(200).send({j:respuesta,confirmacion:true});
-                        
+                        res.status(200).send({data:respuesta,confirmacion:true}); 
                     }
                 });
             }
-            else
-            {
-                res.status(200).send(false);
-            }
+            else res.status(200).send(false);
         })
     });
 
@@ -60,9 +55,7 @@ module.exports = function(connection)
             {
                 res.status(200).send({mensaje:respuesta});
             });
-
         });
-  
     });
 
     return apirouter;
