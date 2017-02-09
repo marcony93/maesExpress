@@ -8,8 +8,8 @@ function camposVacios(form)
     {
             console.log(d[x].id)
         if(d[x].value == "")
-         document.getElementById(d[x].id).className = String("form-control obligatorio noVacio emptyAlert")
+         document.getElementById(d[x].id).className = String("form-control noVacio emptyAlert")
          else
-         document.getElementById(d[x].id).className = String("form-control obligatorio noVacio");
+         document.getElementById(d[x].id).className = String("form-control noVacio");
     }
 }
