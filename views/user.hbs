@@ -1,203 +1,30 @@
- <br><br><br>
- <section class="paginas-internas">
-                <div class="container">
-                    <div class="row">
-                        <article class="col-md-10 col-md-offset-1">
-                            <h2>Gestor de envios</h2>
-                            <hr>
-                            <div id="accordion" role="tablist" aria-multiselectable="true">
-                                <div class="panel panel-default">
-                                    <h4 class="panel-heading">
-                                       <a data-toggle="collapse" data-parent="#accordion" href="#tab-address">Direcciones</a>
+<section class="userWelcome"> <!-- .cover-->
 
-                                    </h4>
-                                    <div id="tab-address" class="panel-collapse collapse ">
-                                        <div class="container">
-                                                  <div class="col-md-4 ">
-                                                        <form name="rates" class="form-horizontal" role="form">
-                                                            <h3>Dirección de origen</h3>
-                                                            <hr>
-                                                                    <div class="form-group">
-                                                                        <label for="senderName" class="col-md-3 control-label" >Nombre</label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="senderName" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
+<div class="align text-xs-center  texto-encabezado">
+    <div class="container">
+        <h1 class="display-4 wow fadeIn ">Bienvenido a MaesExpress</h1>
+         <p class="lead wow fadeIn"  data-wow-delay=".3s">Hecha un vistaso a nuestros servicios online</p>
+         <br><br>
+         <div class="row wow fadeIn " data-wow-delay=".6s">
+             <div class="col-md-4">
+             <a href="/createShipment" class="btn btn-outline-secondary btn-lg btn-block font ">Crear un envio <br> <i class="fa fa-cart-plus" aria-hidden="true"></i> </a>
+             </div>
+             <div class="col-md-4">
+             <a href="#" class="btn btn-outline-secondary btn-lg btn-block font ">Historial de Envios <br> <i class="fa fa-book" aria-hidden="true"></i> </a>
+             </div>
+             <div class="col-md-4">
+             <a href="#" class="btn btn-outline-secondary btn-lg btn-block font">Administrar cuenta  <br> <i class="fa fa-cog" aria-hidden="true"></i></a>
+             </div>
+            
+              
+             
+         </div>     
+     </div>
 
-                                                                     <div class="form-group">
-                                                                        <label for="originCountry" class="col-md-3 control-label" >Dirección  </label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="originAddr" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
+     
+    
+   
+ </div> 
+  
 
-                                                                     <div class="form-group">
-                                                                        <label for="originCity" class="col-md-3 control-label" >Ciudad  </label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="originCity" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
-
-                                                                     <div class="form-group">
-                                                                        <label for="originState" class="col-md-3 control-label" >Estado  </label>
-                                                                             <div class="col-md-9">
-                                                                                 <select class="selectpicker form-control " id="state" data-style="btn-default" >
-                                                                                    <option value="1">Virginia</option>
-                                                                                    <option value="2">California</option>
-                                                                                    <option value="3">New York</option>
-                                                                                    <option value="4">Los Angeles</option>
-                                                                                    <option value="5">Dealaware</option>
-                                                                                 </select>
-                                                                            </div>
-                                                                    </div>
-
-                                                                      <div class="form-group">
-                                                                        <label for="originZipc" class="col-md-3 control-label" >Codigo postal  </label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="originZipc" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
-                                                                     
-                                                                       <div class="form-group">
-                                                                        <label for="SenderTel" class="col-md-3 control-label" >Telefono  </label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="SenderTel" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
-                                                                
-                                                            </form>
-                                                    </div>
-
-                                                       <div class="col-md-4 ">
-                                                            <form name="rates" class="form-horizontal" role="form">
-                                                            <h3>Dirección de destino</h3>
-                                                            <hr>
-                                                                   <div class="form-group">
-                                                                        <label for="receiverName" class="col-md-3 control-label" >Remitente</label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="receiverName" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
-
-                                                                     <div class="form-group">
-                                                                        <label for="receiverAddr" class="col-md-3 control-label" >Dirección  </label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="receiverAddr" class="form-control obligatorio">
-                                                                            </div>
-                                                                     </div>
-
-                                                                     <div class="form-group">
-                                                                        <label for="destinationCity" class="col-md-3 control-label" >Ciudad  </label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="destinationCity" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
-
-                                                                    <div class="form-group">
-                                                                        <label for="destinationCounty" class="col-md-3 control-label" >Pais  </label>
-                                                                             <div class="col-md-9">
-                                                                                 <select class="selectpicker form-control " id="destinationCounty" data-style="btn-default" >
-                                                                                    <option value="1">Honduras</option>
-                                                                                    <option value="2">El Salvador</option>
-                                                                                    <option value="3">Guatemala</option>
-                                                                                    <option value="4">Costa Rica</option>
-                                                                                    <option value="5">Nicaragua</option>
-                                                                                 </select>
-                                                                            </div>
-                                                                    </div>
-
-                                                                    <div class="form-group">
-                                                                        <label for="destinationState" class="col-md-3 control-label" >Provincia  </label>
-                                                                             <div class="col-md-9">
-                                                                                 <select class="selectpicker form-control " id="destinationState" data-style="btn-default" >
-                                                                                    <option value="1">F.M</option>
-                                                                                    <option value="2">La Esperanza</option>
-                                                                                    <option value="3">Cortes</option>
-                                                                                    <option value="4">Olancho</option>
-                                                                                    <option value="5">La Ceiba</option>
-                                                                                 </select>
-                                                                            </div>
-                                                                    </div>
-
-                                                                     <div class="form-group">
-                                                                        <label for="destinationZipc" class="col-md-3 control-label" >Codigo postal  </label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="destinationZipc" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
-                                                                     
-                                                                       <div class="form-group">
-                                                                        <label for="receiverTel" class="col-md-3 control-label" >Telefono  </label>
-                                                                             <div class="col-md-9">
-                                                                                  <input type="text" id="receiverTel" class="form-control obligatorio">
-                                                                            </div>
-                                                                    </div>
-                                                                    
-                                                            </form>  
-                                                             
-                                                       </div>
-                                                        <a   class="collapsed btn btn-primary btn-md" data-toggle="collapse" data-parent="#accordion" href="#tab-details">Continuar</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            <div class="panel panel-default">
-                                    <h4 class="panel-heading">
-                                     <a class=""  >Detalles de envio</a>
-                                    </h4>
-                                    <div id="tab-details" class="panel-collapse collapse">
-                                        <p>
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                        </p>
-                                        <p>
-                                            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-
-                                        </p>
-
-                                    </div>
-                                </div>
-
-                                          <div class="panel panel-default">
-                                              <h4 class="panel-heading">
-
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#tab-billing" >Pago</a>
-
-                                                      </h4>
-                                               <div id="tab-billing" class="panel-collapse collapse">
-                                                    <p>
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                                    </p>
-                                                    <p>
-                                                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-
-                                                    </p>
-
-                                             </div>
-                                       </div>
-
-
-                                <div class="panel panel-default">
-                                    <h4 class="panel-heading">
-                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#tab-confirmation" >
-                                        Confirmación de pago
-                                        </a>
-
-                                    </h4>               
-                                    <div id="tab-confirmation" class="panel-collapse collapse">
-                                        <p>
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                        </p>
-                                        <p>
-                                            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        
-                    </div>
-                </div>
- </section>
+</section>

@@ -614,4 +614,47 @@ form[role=login] {
   color: #fff; }
 
 
+  /*-----------------------------
+     User page welcome
+------------------------------*/
 
+  .userWelcome{
+  background: url("../img/welcome.jpg") no-repeat center top !important;
+   color: #fff;
+  background-size: cover;
+  background-attachment: fixed !important;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+      -ms-flex-direction: column ;
+          flex-direction: column ; 
+  
+}
+
+
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-outline-secondary {
+  color:white;
+  background-image: none;
+  background-color: transparent;
+  border-color: #F26235 !important;
+  }
+  .btn-outline-secondary:hover {
+   color: #F26235 !important;
+    background-color:transparent;
+    border-color: #F26235 !important; }
+
+    .font{
+      font-size: 1.7em !important;
+    }
+    
