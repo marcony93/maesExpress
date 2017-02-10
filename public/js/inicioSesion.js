@@ -9,8 +9,8 @@ function iniciarSesion(){
         var data = JSON.parse(res)
         if(data.confirmacion == true)   window.location.replace(window.location.origin + '/user');
         else $('#errorMessage').modal('show');
-})
-}
+    })
+};
 
 function exitSession()
 {

@@ -49,19 +49,28 @@ function abrirSesion()
 
 function verificName()
 {
-    window.http("http://localhost:8555/api/getUsersName",{userName:document.getElementById('userId').value},function(res)
+    if(document.getElementById('userId').value != "")
     {
-        var users = JSON.parse(res);
-        if(users.data.length > 0)
+        window.http("http://localhost:8555/api/getUsersName",{userName:document.getElementById('userId').value},function(res)
         {
-            var mensaje = "Este nombre de usuario ya existe en la base de datos, intenta con otro";
-            document.getElementById("mensajeContrasenia").innerHTML = mensaje;
-            document.getElementById("userId").className = String("form-control noVacio emptyAlert");
-        }
-        else
-        {
-            document.getElementById("mensajeContrasenia").innerHTML = "";
-            document.getElementById("userId").className = String("form-control noVacio");
-        }
-    })
+            var users = JSON.parse(res);
+            console.log(document.getElementById('userId').value)
+            if(users.data.length > 0)
+            {
+                var mensaje = "Este nombre de usuario ya existe en la base de datos, intenta con otro";
+                document.getElementById("mensajeContrasenia").innerHTML = mensaje;
+                document.getElementById("userId").className = String("form-control noVacio emptyAlert");
+            }
+            else
+            {
+                document.getElementById("mensajeContrasenia").innerHTML = "";
+                document.getElementById("userId").className = String("form-control noVacio");
+            }
+        })
+    }
+    else
+    {
+        document.getElementById("mensajeContrasenia").innerHTML = "";
+        document.getElementById("userId").className = String("form-control noVacio");
+    }
 }

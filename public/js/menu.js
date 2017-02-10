@@ -22,6 +22,9 @@ $( document ).ready(function() {
                     <li onclick="exitSession()"><a href="#">Cerrar sesión</a></li>\
                 </ul>\
                 </li>';
+    
+    window.UserInfo = window.getCookie('userCookie');
+    console.log(window.urlEncodingJson(window.UserInfo))
             
     }
 });
